@@ -30,8 +30,11 @@ output "group_arn" {
 ## Input Variables
 
 permission_set_name: (Required) The name of the AWS SSO permission set.
+
 iam_permissions: (Required) List of IAM permissions to associate with the permission set.
+
 existing_group: (Optional) Existing group ARN to which the permission set will be assigned. If not provided, a new group will be created.
+
 create_new_group: (Optional) Whether to create a new group for the permission set. Default is false.
 
 ## Example Permissions JSON File
@@ -84,6 +87,7 @@ Make sure the permissions.json file is in the same directory as the main.tf file
 ## Outputs
 
 permission_set_id: The ID of the AWS SSO permission set.
+
 group_arn: The ARN of the IAM group associated with the permission set.
 
 Please note that the AWS provider configuration is not included in the example above. Make sure to configure the AWS provider block appropriately before using the module.
